@@ -14,50 +14,69 @@
 
 <body>
 
-<div class="main-title">Crystal Collector</div>
+<div class="main-title"><strong>Crystal Collector</strong></div>
 
 <br>
 
-        <div class="directions">
-            
-            <ul>You will be given a random number to te start of the game</ul>
-
-            <ul>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </ul>
-
-            <ul>You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</ul>
-
-            <ul>The value of each crystal is hidden from you until you click on it.</ul>
-
-            <ul>Each time when the game starts, the game will change the values of each crystal.</ul>
-
-        </div>
-
-<br>
-
-<div class="row">
-        <div class="col-md-4">
-            39
-        </div>
-
-        <div class="col-md-2">
-            Wins = 0
-            Losses= 0
-        </div>
-        <div class="col-md-2"></div>
-
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
-      </div>
-
-
-
-<button id="fancy-button" class="btn ntm-primary">Hello World jquery KIT</button>
+<div class="directions">
     
+    <ul>You will be given a random number to te start of the game</ul>
 
+    <ul>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. </ul>
 
- 
+    <ul>You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</ul>
 
+    <ul>The value of each crystal is hidden from you until you click on it.</ul>
 
+    <ul>Each time when the game starts, the game will change the values of each crystal.</ul>
+
+</div>
+
+<br>
+
+    <div class="numberToMatch">
+        
+        <h2>Number To Get:
+            <span id= "randomNumber"></span>
+        </h2>
+
+    </div>
+        
+    <div class="winsAndLosses">
+       
+        <h2>Wins:
+        
+            <span id= "numberWins"></span>
+                
+            <br>
+                
+                Losses: 
+                
+            <span id= "numberLosses">
+
+            </span>
+        </h2>
+    </div>
+<br>
+<br>
+<br>
+
+    <div class="gems">
+            
+            <img src="images/bluegem.jpg" class=gem-pic id="one" alt="Blue Gem">
+            <img src="images/greengem.jpg" class=gem-pic id="two" alt="Green Gem">
+            <img src="images/redgem.jpg" class=gem-pic id= "three" alt="Red Gem">
+            <img src="images/yellowgem.jpg" class=gem-pic id= "four" alt="Yellow Gem">
+
+    </div>
+
+    <div class="userTotal">
+         
+            <h2>Your total score is:
+                
+                <span id="finalTotal"></span>
+            </h2>
+    </div>
 
 <script src="./javascript/game.js"></script>
 </body>

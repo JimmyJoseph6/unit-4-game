@@ -1,0 +1,64 @@
+body{
+    background-image: url("../images/colorful-background.jpg");
+    font-size: 18px;
+    font: bold;
+	line-height: 34px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: #777;
+    
+}
+
+.main-title {
+    text-align: center;
+    font-size: 42px;
+    background-color: pink;
+    color: antiquewhite;
+    width: 50%;
+}
+
+div{
+	background-color: white;
+	margin: 10px;
+	width: 25%;
+	border: solid 2px antiquewhite;
+	padding: 10px;
+}
+
+span{
+	font-weight: bold;
+	text-align: center;
+}
+
+
+ul {
+    text-indent: 10px;
+}
+
+div.header, div.gems{
+	background-color: white;
+}
+
+div.header, div.directions{
+	width: 50%;
+}
+
+.numberToMatch, .winsAndLosses {
+	float: left;
+	width: 25%;
+	height: 150px;
+}
+.userTotal{
+	width: 30%;
+    height: 100px;
+    
+}
+.gems{
+    text-align: center;
+    clear: both;
+    background: white;
+    width: 50%;
+}
+.gem-pic{
+	height: 60px;
+	margin: 10px;
+}

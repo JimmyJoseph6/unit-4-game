@@ -1,160 +1,123 @@
-// $( document ).ready() block. Code waiting for document to load (doucment ready jquery)
+$( document ).ready(function(){
 
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
+    var Random=Math.floor(Math.random()*101+19)
+    
+    // Selects a random number to be shown at the start of the game
+    // Number should be should be between 19 - 120
+     
+    $('#randomNumber').text(Random);
 
-    // if(true){
+    // Appending random number to the randomNumber id in the html doc
+    
+    var num1= Math.floor(Math.random()*11+1)
+    var num2= Math.floor(Math.random()*11+1)
+    var num3= Math.floor(Math.random()*11+1)
+    var num4= Math.floor(Math.random()*11+1)
+
+    // Set up random numbers for each gem
+    // Random number has to be between 1 - 12
+    
+    var userTotal= 0; 
+    var wins= 0;
+    var losses = 0;
+
+    // Decaring variables for tallies
+
+    $('#numberWins').text(wins);
+    $('#numberLosses').text(losses);
+
+    // Reset game
+
+    function reset(){
+
+    Random=Math.floor(Math.random()*101+19);
+    
+    console.log(Random)
+    
+    $('#randomNumber').text(Random);
+    num1= Math.floor(Math.random()*11+1);
+    num2= Math.floor(Math.random()*11+1);
+    num3= Math.floor(Math.random()*11+1);
+    num4= Math.floor(Math.random()*11+1);
+    userTotal= 0;
+    $('#finalTotal').text(userTotal);
+    } 
+
+    //adds the wins to the userTotal
+
+    function yay(){
+    alert("You won!");
+    wins++; 
+    $('#numberWins').text(wins);
+    reset();
+  }
+  
+    //addes the losses to the userTotal
+    function loser(){
+    alert ("You lose!");
+    losses++;
+    $('#numberLosses').text(losses);
+    reset()
+  }
+
+    //sets up click for jewels
+    $('#one').on ('click', function(){
+    userTotal = userTotal + num1;
+    
+    console.log("New userTotal= " + userTotal);
+    
+    
+    //sets win/lose conditions
+    $('#finalTotal').text(userTotal); 
+        if (userTotal == Random){
+        yay();
+        }
+        else if ( userTotal > Random){
+        loser();
+        }   
+})  
+
+    $('#two').on ('click', function(){
+        userTotal = userTotal + num2;
         
-    // } else if( true) {
+        console.log("New userTotal= " + userTotal);
+        
+        $('#finalTotal').text(userTotal); 
+        if (userTotal == Random){
+        yay();
+        }
+        else if ( userTotal > Random){
+        loser();
+        } 
+    })  
 
-    // } else {
+     $('#three').on ('click', function(){
+        userTotal = userTotal + num3;
+        
+        console.log("New userTotal= " + userTotal);
+        
+        //sets win/lose conditions
+        $('#finalTotal').text(userTotal);
+                if (userTotal == Random){
+                yay();
+            }
+            else if ( userTotal > Random){
+                loser();
+          } 
+    })  
 
-    // }
+    $('#four').on ('click', function(){
+    userTotal = userTotal + num4;
 
-
-
-
-    // if(1){
-    //     console.log("true 1")
-    // }
-
-    // if(2){
-    //     console.log("true 2")
-    // }
-
-    // if(3){
-    //     console.log("true 3")
-    // }
-
-
-
-
-
-
-// y = "cats"
-
-// switch (y) {
-
-//     case "cats":
-//     console.log("hello")
-//     break;
-
-//     case 2:
-//     console.log("y is 2")
-//     break;
-
-//     default:
-//     consoel.log("neither of them")
-//     break;
-// }
-
-
-
-
-
-    // Wrap some code to be executed at a future time
-    // function whateverWordYouWant(){
-    // console.log("hello")
-
-    // }
-
-    // function iHateNamingStuff(a,b){
-    //     return a+ b
-    // }
-
-
-    // var sum = iHateNamingStuff(2,3)
-    // console.log(sum)
-
-
-    // var newvariable = function() {
-    //     return a+ b
-    // }
-
-
-    // var hereisthevalue = newvariable(1,2)
-
-
-
-
-
-// objects 
-
-// var myObject = {
-//     key: "value",
-//     value: "Jimmy",
-//     favoriteFood: "Ceviche",
-//     "where i live": "bayonne"
-
-//     myFunction: function() {
-//         console.log("hello world" + this.name)
-//     }
-// }
-
-// // console.log(myObject.name)
-
-// myObject.myFunction()
-
-// myObject["name"]
-
-
-
-
-
-    // var newObj = {
-
-    //     stars: function() {
-    //         console.log("here", this)
-
-    //         var thirdobj = {
-    //             onemore: function(){
-    //                 console.log("inside", this)
-    //             }
-    //         }
-
-    //         thirdobj.onemore()
-    //     }
-    // }
-
-    // newObj.stars();
-
-
-
+      console.log("New userTotal= " + userTotal);
+      
+        $('#finalTotal').text(userTotal); 
             
-// var btn = document.getElementById("fancy-button")  
-
-var btn= $("fancy-button")
-
-    function generateRandos(tellmeNumber){
-        return Math.floor(Math.random()*tellmeNumber)
-    }
-
-
-    btn.on("click", function(){
-        console.log(generateRandos(302))
-    })
-            
-            
-            
-//             function generateRandos(){
-
-//             return Math.floor(Math.random()*20)
-//             }
- 
-           
-
-            // btn.onclick = function(){
-            //     console.log(generateRandos(100))
-            // }
-
-
-            
-
-
-//             // btn.addEventListener( 'click' , function () {
-//             // console.log("with event listner")
-
-
-
-            
+                if (userTotal == Random){
+                yay();
+            }
+            else if ( userTotal > Random){
+                loser();
+            }
+    });   
+  }); 
