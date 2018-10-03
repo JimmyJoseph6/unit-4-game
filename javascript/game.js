@@ -62,20 +62,20 @@ $( document ).ready(function(){
 
     //sets up click for jewels
     $('#one').on ('click', function(){
-    userTotal = userTotal + num1;
+        userTotal = userTotal + num1;
     
-    console.log("New userTotal= " + userTotal);
+        console.log("New userTotal= " + userTotal);
     
     
-    //sets win/lose conditions
-    $('#finalTotal').text(userTotal); 
+        //sets win/lose conditions
+        $('#finalTotal').text(userTotal); 
         if (userTotal == Random){
         yay();
         }
         else if ( userTotal > Random){
         loser();
         }   
-})  
+    })  
 
     $('#two').on ('click', function(){
         userTotal = userTotal + num2;
@@ -109,10 +109,9 @@ $( document ).ready(function(){
     $('#four').on ('click', function(){
     userTotal = userTotal + num4;
 
-      console.log("New userTotal= " + userTotal);
+        console.log("New userTotal= " + userTotal);
       
         $('#finalTotal').text(userTotal); 
-            
                 if (userTotal == Random){
                 yay();
             }
